@@ -8,6 +8,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -20,6 +22,8 @@ import pe.idat.joeinventory.view.fragmentos.F_Inventario;
 public class MenuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawer;
+
+    boolean DobleToqueParaSalir = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,5 +67,26 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (DobleToqueParaSalir){
+            super.onBackPressed();
+            Toast.makeText(this, "Saliste de la aplicación", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        /*Al presionar una vez en el boton de retroceso*/
+        this.DobleToqueParaSalir = true;
+        Toast.makeText(this, "Presione 2 veces para salir", Toast.LENGTH_SHORT).show();
+
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                DobleToqueParaSalir = false;
+            }
+        }, 2000);
+
     }
 }
