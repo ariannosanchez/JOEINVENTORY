@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">JOEINVENTORY</string>
+    <string name="app_name">JOE INVENTORY</string>
+
+    <!--Drawer menu-->
+    <string name="Opcion_Inventario">Inventario</string>
+    <string name="Opcion_Ajustes">Ajustes</string>
+    <string name="Opcion_Salir">Salir</string>
+
+    <!--Drawer Layout-->
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

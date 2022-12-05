@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn ="navigation_view">
+
+    <item
+        android:id="@+id/Opcion_Inventario"
+        android:title="@string/Opcion_Inventario"
+        android:icon="@drawable/icono_inventario"
+        />
+
+    <item
+        android:id="@+id/Opcion_Ajustes"
+        android:title="@string/Opcion_Ajustes"
+        android:icon="@drawable/icono_ajustes"
+        />
+
+    <item
+        android:id="@+id/Opcion_Salir"
+        android:title="@string/Opcion_Salir"
+        android:icon="@drawable/icono_salir"
+        />
+
+
+</menu>

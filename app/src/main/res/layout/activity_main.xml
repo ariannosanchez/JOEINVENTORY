@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#002e58"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -41,7 +41,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/etusuariologin"
                 android:layout_width="280dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="52dp"
@@ -59,7 +59,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/etpasswordlogin"
                 android:layout_width="280dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="27dp"
@@ -71,11 +71,12 @@
                 android:hint="Ingrese su contraseña"
                 android:inputType="textPassword"
                 android:paddingStart="15dp"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+                app:layout_constraintEnd_toEndOf="@+id/etusuariologin"
+                app:layout_constraintStart_toStartOf="@+id/etusuariologin"
+                app:layout_constraintTop_toBottomOf="@+id/etusuariologin" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btniniciarlogin"
                 android:layout_width="280dp"
                 android:layout_height="55dp"
                 android:layout_marginBottom="76dp"
@@ -84,9 +85,9 @@
                 android:text="Iniciar Sesión"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+                app:layout_constraintEnd_toEndOf="@+id/etpasswordlogin"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPassword" />
+                app:layout_constraintStart_toStartOf="@+id/etpasswordlogin" />
 
             <ImageView
                 android:id="@+id/imageView2"
