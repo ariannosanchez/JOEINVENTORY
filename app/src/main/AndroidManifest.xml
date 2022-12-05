@@ -16,7 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".AgregarProducto"
+            android:name=".view.AgregarProducto"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
