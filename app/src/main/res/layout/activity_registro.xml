@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#002e58"
-    tools:context=".view.MainActivity">
+    tools:context=".view.RegistroActivity">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
         android:layout_width="371dp"
         android:layout_height="600dp"
         android:layout_marginStart="20dp"
@@ -17,7 +15,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="83dp"
         android:elevation="8dp"
-        app:cardCornerRadius="12dp"
+        app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,20 +29,57 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="192dp"
-                android:text="Iniciar Sesión"
+                android:layout_marginTop="40dp"
+                android:text="Registrarse"
                 android:textColor="@color/darkBlue"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.448"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/etusuariologin"
+                android:id="@+id/etnombrereg"
                 android:layout_width="280dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="52dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edtext_bg"
+                android:drawableStart="@drawable/ic_nombre"
+                android:drawablePadding="10dp"
+                android:elevation="6dp"
+                android:ems="10"
+                android:hint="Ingrese su nombre"
+                android:inputType="textPersonName"
+                android:paddingStart="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <EditText
+                android:id="@+id/etapellidoreg"
+                android:layout_width="280dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/edtext_bg"
+                android:ems="10"
+                android:drawableStart="@drawable/ic_nombre"
+                android:drawablePadding="10dp"
+                android:elevation="6dp"
+                android:hint="Ingrese sus apellidos"
+                android:inputType="textPersonName"
+                android:paddingStart="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etnombrereg" />
+
+            <EditText
+                android:id="@+id/etusuarioreg"
+                android:layout_width="280dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="50dp"
                 android:background="@drawable/edtext_bg"
                 android:ems="10"
                 android:drawableStart="@drawable/ic_user"
@@ -56,70 +91,60 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintTop_toBottomOf="@+id/etapellidoreg" />
 
             <EditText
-                android:id="@+id/etpasswordlogin"
+                android:id="@+id/etpasswordreg"
                 android:layout_width="280dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="27dp"
+                android:layout_marginTop="50dp"
                 android:background="@drawable/edtext_bg"
+                android:ems="10"
                 android:drawableStart="@drawable/ic_password"
                 android:drawablePadding="10dp"
-                android:ems="10"
                 android:elevation="6dp"
-                android:hint="Ingrese su contraseña"
+                android:hint="Ingrese su contraseña "
                 android:inputType="textPassword"
                 android:paddingStart="15dp"
-                app:layout_constraintEnd_toEndOf="@+id/etusuariologin"
-                app:layout_constraintStart_toStartOf="@+id/etusuariologin"
-                app:layout_constraintTop_toBottomOf="@+id/etusuariologin" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etusuarioreg" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btniniciarlogin"
+                android:id="@+id/btnregistarusuario"
                 android:layout_width="280dp"
                 android:layout_height="55dp"
-                android:layout_marginBottom="76dp"
                 android:background="@drawable/custom_btn"
                 android:elevation="6dp"
-                android:text="Iniciar Sesión"
+                android:text="REGISTRARSE"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/etpasswordlogin"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/etpasswordlogin" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:layout_marginBottom="36dp"
-                app:layout_constraintBottom_toTopOf="@+id/textView3"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@mipmap/icono_logoapp" />
+                app:layout_constraintTop_toBottomOf="@+id/etpasswordreg"
+                app:layout_constraintVertical_bias="0.746" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/btnregistrar"
+        android:id="@+id/btnloginreg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
-        android:layout_marginBottom="24dp"
-        android:text="Registrarse"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/custom_btn"
+        android:text="INICIAR SESIÓN"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
-
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:ignore="UnknownIdInLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
