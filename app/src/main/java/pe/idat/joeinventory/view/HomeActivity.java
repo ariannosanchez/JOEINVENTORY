@@ -1,8 +1,12 @@
 package pe.idat.joeinventory.view;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -21,6 +25,8 @@ public class HomeActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityHomeBinding binding;
+    boolean DobleToqueParaSalir = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +39,7 @@ public class HomeActivity extends AppCompatActivity {
         binding.appBarHome.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                irAgregar();
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
@@ -42,7 +47,7 @@ public class HomeActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_principal, R.id.nav_usuarios, R.id.nav_historial)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home);
@@ -62,5 +67,30 @@ public class HomeActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_home);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    private void irAgregar(){
+        startActivity(new Intent(this, AgregarProducto.class));
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (DobleToqueParaSalir){
+            super.onBackPressed();
+            Toast.makeText(this, "Saliste de la aplicación", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        /*Al presionar una vez en el boton de retroceso*/
+        this.DobleToqueParaSalir = true;
+        Toast.makeText(this, "Presione 2 veces para salir", Toast.LENGTH_SHORT).show();
+
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                DobleToqueParaSalir = false;
+            }
+        }, 2000);
+
     }
 }
