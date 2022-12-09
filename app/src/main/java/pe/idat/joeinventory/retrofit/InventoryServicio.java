@@ -25,5 +25,5 @@ public interface InventoryServicio {
     public Call<List<ResponseProducto>> listarProducto();
 
     @GET("producto/{codigo}")
-    public Call<ResponseProducto> find(@Path("codigo") String cod);
+    public Call<ResponseProducto> find(@Path("codigo") String codigo);
 }

@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivproducto"
             android:layout_width="97dp"
             android:layout_height="109dp"

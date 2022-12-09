@@ -47,8 +47,8 @@ public class ProductoViewModel extends AndroidViewModel {
 
     }
 
-    public void BuscarProducto(String cod){
-        new InventoryClient().getINSTANCE().find(cod)
+    public void BuscarProducto(String codigo){
+        new InventoryClient().getINSTANCE().find(codigo)
                 .enqueue(new Callback<ResponseProducto>() {
                     @Override
                     public void onResponse(Call<ResponseProducto> call, Response<ResponseProducto> response) {
