@@ -1,6 +1,8 @@
 package pe.idat.joeinventory.viewmodel;
 
 import android.app.Application;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -15,10 +17,14 @@ import pe.idat.joeinventory.retrofit.response.ResponseProducto;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.http.Path;
 
 public class ProductoViewModel extends AndroidViewModel {
 
     public MutableLiveData<List<ResponseProducto>> listProductoMutableLiveData
+            = new MutableLiveData<>();
+
+    public MutableLiveData<ResponseProducto> buscarProductoMutableLiveData
             = new MutableLiveData<>();
 
     public ProductoViewModel(@NonNull Application application) {
@@ -39,5 +45,21 @@ public class ProductoViewModel extends AndroidViewModel {
                     }
                 });
 
+    }
+
+    public void BuscarProducto(String cod){
+        new InventoryClient().getINSTANCE().find(cod)
+                .enqueue(new Callback<ResponseProducto>() {
+                    @Override
+                    public void onResponse(Call<ResponseProducto> call, Response<ResponseProducto> response) {
+                        Log.i("INFO", "Se cumplio con el response");
+                        buscarProductoMutableLiveData.setValue(response.body());
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseProducto> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                });
     }
 }

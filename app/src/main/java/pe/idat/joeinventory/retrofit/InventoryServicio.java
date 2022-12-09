@@ -11,6 +11,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface InventoryServicio {
 
@@ -23,4 +24,6 @@ public interface InventoryServicio {
     @GET("producto")
     public Call<List<ResponseProducto>> listarProducto();
 
+    @GET("producto/{codigo}")
+    public Call<ResponseProducto> find(@Path("codigo") String cod);
 }
