@@ -12,11 +12,11 @@
     <fragment
         android:id="@+id/nav_usuarios"
         android:name="pe.idat.joeinventory.view.fragments.UsuarioFragment"
-        android:label="fragment_usuario"
+        android:label="Usuarios"
         tools:layout="@layout/fragment_usuario" />
     <fragment
         android:id="@+id/nav_historial"
         android:name="pe.idat.joeinventory.view.fragments.HistorialFragment"
-        android:label="fragment_historial"
+        android:label="Consulta Producto"
         tools:layout="@layout/fragment_historial" />
 </navigation>

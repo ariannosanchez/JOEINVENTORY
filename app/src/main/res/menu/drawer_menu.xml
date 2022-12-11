@@ -9,11 +9,11 @@
         android:icon="@drawable/icono_inventario"
         />
 
-    <item
-        android:id="@+id/Opcion_Ajustes"
-        android:title="@string/Opcion_Ajustes"
-        android:icon="@drawable/icono_ajustes"
-        />
+<!--    <item-->
+<!--        android:id="@+id/Opcion_Ajustes"-->
+<!--        android:title="@string/Opcion_Ajustes"-->
+<!--        android:icon="@drawable/icono_ajustes"-->
+<!--        />-->
 
     <item
         android:id="@+id/Opcion_Salir"

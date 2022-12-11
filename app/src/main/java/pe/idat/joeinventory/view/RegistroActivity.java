@@ -71,10 +71,15 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         else if (binding.etpasswordreg.getText().toString().isEmpty()){
             binding.etpasswordreg.setError("Campo obligatorio");
             binding.etpasswordreg.setFocusable(true);
-        }else{
+        }
+        else if (binding.etdnireg.getText().toString().isEmpty()){
+            binding.etdnireg.setError("Campo obligatorio");
+            binding.etdnireg.setFocusable(true);
+        } else{
             RequestRegistro requestRegistro = new RequestRegistro();
             requestRegistro.setNombre(binding.etnombrereg.getText().toString());
             requestRegistro.setApellido(binding.etapellidoreg.getText().toString());
+            requestRegistro.setDni(binding.etdnireg.getText().toString());
             requestRegistro.setUsuario(binding.etusuarioreg.getText().toString());
             requestRegistro.setPassword(binding.etpasswordreg.getText().toString());
             authViewModel.registroUsuario(requestRegistro);
@@ -85,6 +90,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
     private void setearControles(){
         binding.etnombrereg.setText("");
         binding.etapellidoreg.setText("");
+        binding.etdnireg.setText("");
         binding.etusuarioreg.setText("");
         binding.etpasswordreg.setText("");
     }

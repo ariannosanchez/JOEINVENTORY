@@ -29,13 +29,12 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="4dp"
                 android:text="Registrarse"
                 android:textColor="@color/darkBlue"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.448"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,12 +60,12 @@
                 android:id="@+id/etapellidoreg"
                 android:layout_width="280dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/edtext_bg"
-                android:ems="10"
                 android:drawableStart="@drawable/ic_nombre"
                 android:drawablePadding="10dp"
                 android:elevation="6dp"
+                android:ems="10"
                 android:hint="Ingrese sus apellidos"
                 android:inputType="textPersonName"
                 android:paddingStart="15dp"
@@ -76,17 +75,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/etnombrereg" />
 
             <EditText
-                android:id="@+id/etusuarioreg"
+                android:id="@+id/etdnireg"
                 android:layout_width="280dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/edtext_bg"
-                android:ems="10"
-                android:drawableStart="@drawable/ic_user"
+                android:drawableStart="@drawable/ic_nombre"
                 android:drawablePadding="10dp"
                 android:elevation="6dp"
-                android:hint="Ingrese su usuario"
-                android:inputType="textPersonName"
+                android:ems="10"
+                android:hint="Ingrese su DNI"
+                android:inputType="number"
                 android:paddingStart="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.494"
@@ -94,15 +93,35 @@
                 app:layout_constraintTop_toBottomOf="@+id/etapellidoreg" />
 
             <EditText
+                android:id="@+id/etusuarioreg"
+                android:layout_width="280dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/edtext_bg"
+                android:drawableStart="@drawable/ic_user"
+                android:drawablePadding="10dp"
+                android:elevation="6dp"
+                android:ems="10"
+                android:hint="Ingrese su usuario"
+                android:inputType="textPersonName"
+                android:paddingStart="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etdnireg" />
+
+
+
+            <EditText
                 android:id="@+id/etpasswordreg"
                 android:layout_width="280dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/edtext_bg"
-                android:ems="10"
                 android:drawableStart="@drawable/ic_password"
                 android:drawablePadding="10dp"
                 android:elevation="6dp"
+                android:ems="10"
                 android:hint="Ingrese su contraseña "
                 android:inputType="textPassword"
                 android:paddingStart="15dp"
@@ -123,8 +142,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etpasswordreg"
-                app:layout_constraintVertical_bias="0.746" />
+                app:layout_constraintTop_toBottomOf="@+id/etpasswordreg" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

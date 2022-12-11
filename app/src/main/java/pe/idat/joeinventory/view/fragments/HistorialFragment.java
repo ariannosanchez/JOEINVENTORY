@@ -10,6 +10,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 
 import pe.idat.joeinventory.R;
 import pe.idat.joeinventory.databinding.FragmentHistorialBinding;
@@ -22,18 +25,18 @@ public class HistorialFragment extends Fragment implements View.OnClickListener 
     FragmentHistorialBinding binding;
     ProductoViewModel productoViewModel;
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentHistorialBinding.inflate(inflater, container, false);
+
         binding.btnBuscar.setOnClickListener(this);
         productoViewModel = new ViewModelProvider(this).get(ProductoViewModel.class);
         productoViewModel.buscarProductoMutableLiveData.observe(requireActivity(),
                 new Observer<ResponseProducto>() {
                     @Override
                     public void onChanged(ResponseProducto responseProducto) {
+                        SetearValores(responseProducto);
                     }
                 });
         return binding.getRoot();
@@ -41,20 +44,23 @@ public class HistorialFragment extends Fragment implements View.OnClickListener 
 
     @Override
     public void onClick(View view) {
-        Buscar();
+        if(view.getId()==binding.btnBuscar.getId()) Buscar();
     }
 
     private void Buscar(){
         productoViewModel.BuscarProducto(binding.etcodigobus.getText().toString());
-        ResponseProducto responseProducto =new ResponseProducto();
-        binding.tvNombre.setText(responseProducto.getNombre());
-        binding.tvDescripcion.setText(responseProducto.getDetalle());
-        Log.i("INFOCODE", binding.etcodigobus.getText().toString());
-        Log.i("INFO2",binding.tvNombre.getText().toString());
-        Log.i("INFO3",binding.tvDescripcion.getText().toString());
-//        binding.tvCantidad.setText(responseProducto.getCantidad().toString());
     }
 
-    private void Codigo(){
+
+    private void SetearValores(ResponseProducto res){
+        binding.etnombre.setText(res.getNombre());
+        binding.etmarca.setText(res.getMarca());
+        binding.etdetalle.setText(res.getDetalle());
+        binding.etcantidad.setText( String.valueOf(res.getCantidad()));
+        binding.etproveedor.setText(res.getEmailProveedor());
+        Glide.with(binding.getRoot())
+                .load(res.getUrlImage())
+                .into(binding.ivimagen);
+
     }
 }

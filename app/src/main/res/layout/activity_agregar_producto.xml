@@ -20,7 +20,7 @@
             android:layout_height="wrap_content">
             
             <EditText
-                android:id="@+id/EtCodigo"
+                android:id="@+id/etcodigopro"
                 android:hint="@string/EtCodigo"
                 android:textSize="18sp"
                 android:maxLines="1"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/EtNombre"
+                android:id="@+id/etnombrepro"
                 android:hint="@string/EtNombre"
                 android:textSize="18sp"
                 android:maxLines="1"
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/EtMarca"
+                android:id="@+id/etmarcapro"
                 android:hint="@string/EtMarca"
                 android:textSize="18sp"
                 android:maxLines="1"
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/EtCantidad"
+                android:id="@+id/etcantidadpro"
                 android:hint="@string/EtCantidad"
                 android:textSize="18sp"
                 android:maxLines="1"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/EtProveedor"
+                android:id="@+id/etproveedorpro"
                 android:hint="@string/EtProveedor"
                 android:textSize="18sp"
                 android:maxLines="1"
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/EtDetalle"
+                android:id="@+id/etdetallepro"
                 android:hint="@string/EtDetalle"
                 android:textSize="18sp"
                 android:height="150dp"
@@ -122,6 +122,25 @@
                 android:layout_height="wrap_content"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnregistrarproducto"
+                android:layout_width="280dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/custom_btn"
+                android:elevation="6dp"
+                android:text="REGISTRAR"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>

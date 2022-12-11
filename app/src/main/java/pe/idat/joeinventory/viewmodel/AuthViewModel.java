@@ -9,7 +9,9 @@ import androidx.lifecycle.MutableLiveData;
 import pe.idat.joeinventory.retrofit.InventoryClient;
 import pe.idat.joeinventory.retrofit.request.RequestLogin;
 import pe.idat.joeinventory.retrofit.request.RequestRegistro;
+import pe.idat.joeinventory.retrofit.request.RequestRegistroProducto;
 import pe.idat.joeinventory.retrofit.response.ResponseLogin;
+import pe.idat.joeinventory.retrofit.response.ResponseProducto;
 import pe.idat.joeinventory.retrofit.response.ResponseRegistro;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,6 +23,9 @@ public class AuthViewModel extends AndroidViewModel {
             = new MutableLiveData<>();
 
     public MutableLiveData<ResponseRegistro> registroMutableLiveData
+            = new MutableLiveData<>();
+
+    public MutableLiveData<ResponseProducto> registroProductoMutableLiveData
             = new MutableLiveData<>();
 
     public AuthViewModel(@NonNull Application application) {
@@ -57,6 +62,23 @@ public class AuthViewModel extends AndroidViewModel {
                         t.printStackTrace();
                     }
                 });
+    }
+
+    public void registroProducto(
+            RequestRegistroProducto requestRegistroProducto){
+        new InventoryClient().getINSTANCE().registrarProducto(requestRegistroProducto)
+                .enqueue(new Callback<ResponseProducto>() {
+                    @Override
+                    public void onResponse(Call<ResponseProducto> call, Response<ResponseProducto> response) {
+                        registroProductoMutableLiveData.setValue(response.body());
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseProducto> call, Throwable t) {
+                        t.printStackTrace();
+                    }
+                });
+
     }
 
 

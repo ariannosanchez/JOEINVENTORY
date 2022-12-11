@@ -13,7 +13,6 @@ import pe.idat.joeinventory.R;
 import pe.idat.joeinventory.databinding.ActivityMainBinding;
 import pe.idat.joeinventory.retrofit.request.RequestLogin;
 import pe.idat.joeinventory.retrofit.response.ResponseLogin;
-import pe.idat.joeinventory.view.adapter.ProductoAdapter;
 import pe.idat.joeinventory.viewmodel.AuthViewModel;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {

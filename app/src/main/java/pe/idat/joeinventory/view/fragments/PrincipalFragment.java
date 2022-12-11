@@ -1,5 +1,6 @@
 package pe.idat.joeinventory.view.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,7 @@ import java.util.List;
 import pe.idat.joeinventory.R;
 import pe.idat.joeinventory.databinding.FragmentPrincipalBinding;
 import pe.idat.joeinventory.retrofit.response.ResponseProducto;
+import pe.idat.joeinventory.view.AgregarProducto;
 import pe.idat.joeinventory.view.adapter.ProductoAdapter;
 import pe.idat.joeinventory.viewmodel.ProductoViewModel;
 
@@ -44,8 +46,22 @@ public class PrincipalFragment extends Fragment {
                         adapter.setProducto(responseProductos);
                     }
                 });
+
+
+        binding.fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                irAgregar();
+            }
+        });
+
         return binding.getRoot();
     }
+
+    private void irAgregar(){
+        startActivity(new Intent(getActivity(), AgregarProducto.class));
+    }
+
 
 
 

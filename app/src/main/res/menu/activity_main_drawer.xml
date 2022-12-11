@@ -10,11 +10,11 @@
             android:title="@string/Opcion_Inventario" />
         <item
             android:id="@+id/nav_usuarios"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:icon="@drawable/ic_user"
+            android:title="@string/Opcion_Usuarios" />
         <item
             android:id="@+id/nav_historial"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:icon="@drawable/ic_busqueda"
+            android:title="Consultar Producto" />
     </group>
 </menu>

@@ -4,13 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -36,12 +37,12 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarHome.toolbar);
-        binding.appBarHome.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                irAgregar();
-            }
-        });
+//        binding.appBarHome.action_settings.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                irAgregar();
+//            }
+//        });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -69,9 +70,6 @@ public class HomeActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    private void irAgregar(){
-        startActivity(new Intent(this, AgregarProducto.class));
-    }
 
     @Override
     public void onBackPressed() {
@@ -92,5 +90,18 @@ public class HomeActivity extends AppCompatActivity {
             }
         }, 2000);
 
+    }
+
+    public boolean onNavigationItemSelected(@NonNull MenuItem item){
+        int id = item.getItemId();
+        if (id == R.id.action_settings){
+            CerrarSesion();
+        }
+        return  true;
+    }
+
+    private void CerrarSesion() {
+        startActivity(new Intent(HomeActivity.this, MainActivity.class));
+        finish();
     }
 }

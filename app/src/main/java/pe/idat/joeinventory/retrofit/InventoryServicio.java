@@ -4,9 +4,11 @@ import java.util.List;
 
 import pe.idat.joeinventory.retrofit.request.RequestLogin;
 import pe.idat.joeinventory.retrofit.request.RequestRegistro;
+import pe.idat.joeinventory.retrofit.request.RequestRegistroProducto;
 import pe.idat.joeinventory.retrofit.response.ResponseLogin;
 import pe.idat.joeinventory.retrofit.response.ResponseProducto;
 import pe.idat.joeinventory.retrofit.response.ResponseRegistro;
+import pe.idat.joeinventory.retrofit.response.ResponseUsuario;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -24,6 +26,12 @@ public interface InventoryServicio {
     @GET("producto")
     public Call<List<ResponseProducto>> listarProducto();
 
+    @GET("usuario")
+    public Call<List<ResponseUsuario>> listarUsuario();
+
     @GET("producto/{codigo}")
     public Call<ResponseProducto> find(@Path("codigo") String codigo);
+
+    @POST("producto/")
+    public Call<ResponseProducto> registrarProducto(@Body RequestRegistroProducto requestRegistroProducto);
 }

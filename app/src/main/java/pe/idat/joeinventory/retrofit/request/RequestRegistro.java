@@ -5,6 +5,7 @@ public class RequestRegistro {
     private String password;
     private String nombre;
     private String apellido;
+    private String dni;
 
     public String getUsuario() {
         return usuario;
@@ -36,5 +37,13 @@ public class RequestRegistro {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 }

@@ -5,6 +5,7 @@ public class ResponseRegistro {
     private String password;
     private String nombre;
     private String apellido;
+    private String dni;
     private Boolean rpta;
     private String mensaje;
 
@@ -38,6 +39,14 @@ public class ResponseRegistro {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public Boolean getRpta() {
