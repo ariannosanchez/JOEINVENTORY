@@ -7,7 +7,6 @@ public class RequestRegistroProducto {
     private String emailProveedor;
     private String marca;
     private String detalle;
-    private String urlImage;
 
     public String getCodigo() {
         return codigo;
@@ -57,11 +56,5 @@ public class RequestRegistroProducto {
         this.detalle = detalle;
     }
 
-    public String getUrlImage() {
-        return urlImage;
-    }
 
-    public void setUrlImage(String urlImage) {
-        this.urlImage = urlImage;
-    }
 }

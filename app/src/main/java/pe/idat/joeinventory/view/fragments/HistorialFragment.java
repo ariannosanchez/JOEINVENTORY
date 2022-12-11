@@ -48,19 +48,38 @@ public class HistorialFragment extends Fragment implements View.OnClickListener 
     }
 
     private void Buscar(){
-        productoViewModel.BuscarProducto(binding.etcodigobus.getText().toString());
+//        productoViewModel.BuscarProducto(binding.etcodigobus.getText().toString().trim());
+        String cod=binding.etcodigobus.getText().toString().trim();
+        Log.i("COD:", cod);
+        if(!cod.equals("")){
+            productoViewModel.BuscarProducto(cod);
+            Log.i("BP:", cod);
+
+        }
     }
 
 
     private void SetearValores(ResponseProducto res){
-        binding.etnombre.setText(res.getNombre());
-        binding.etmarca.setText(res.getMarca());
-        binding.etdetalle.setText(res.getDetalle());
-        binding.etcantidad.setText( String.valueOf(res.getCantidad()));
-        binding.etproveedor.setText(res.getEmailProveedor());
-        Glide.with(binding.getRoot())
-                .load(res.getUrlImage())
-                .into(binding.ivimagen);
+        if (res.getCodigo().equals("null")){
+            binding.etnombre.setText("No se encontraron resultados");
+            binding.etmarca.setText("");
+            binding.etcantidad.setText("");
+            binding.etproveedor.setText("");
+            binding.etdetalle.setText("");
+            Glide.with(binding.getRoot())
+                    .load("https://media.tenor.com/IHdlTRsmcS4AAAAC/404.gif")
+                    .into(binding.ivimagen);
+        }
+        else{
+            binding.etnombre.setText(res.getNombre());
+            binding.etmarca.setText(res.getMarca());
+            binding.etdetalle.setText(res.getDetalle());
+            binding.etcantidad.setText( String.valueOf(res.getCantidad()));
+            binding.etproveedor.setText(res.getEmailProveedor());
+            Glide.with(binding.getRoot())
+                    .load(res.getUrlImage())
+                    .into(binding.ivimagen);
+        }
 
     }
 }

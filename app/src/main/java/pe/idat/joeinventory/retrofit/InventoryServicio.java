@@ -32,6 +32,6 @@ public interface InventoryServicio {
     @GET("producto/{codigo}")
     public Call<ResponseProducto> find(@Path("codigo") String codigo);
 
-    @POST("producto/")
+    @POST("producto")
     public Call<ResponseProducto> registrarProducto(@Body RequestRegistroProducto requestRegistroProducto);
 }
