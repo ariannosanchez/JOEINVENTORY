@@ -16,5 +16,9 @@
             android:id="@+id/nav_historial"
             android:icon="@drawable/ic_busqueda"
             android:title="Consultar Producto" />
+        <item
+            android:id="@+id/nav_informacion"
+            android:icon="@drawable/ic_acercade"
+            android:title="@string/Acercade" />
     </group>
 </menu>

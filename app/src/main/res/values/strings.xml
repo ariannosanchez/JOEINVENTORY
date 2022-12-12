@@ -21,6 +21,12 @@
     <string name="EtProveedor">Email proveedor</string>
     <string name="EtDetalle">Detalle</string>
 
+    <!--Información de la aplicación-->
+    <string name="DesarrolladoresTXT">Desarrollado por: Arianno Sanchez Mitma</string>
+    <string name="DesarrolladoresTXT2">Desarrollado por: Jeremy Ayza Matias</string>
+    <string name="CorreoContactoTXT">Contacto: grupo3@outlook.com</string>
+    <string name="VersionTXT">Versión 1.0</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_home">HomeActivity</string>
@@ -28,9 +34,11 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="Acercade">Acerca De</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="valetcodigobuscar">Ingrese el codigo del producto a buscar</string>
+    <string name="mn_acerda_de">Acerca De</string>
 </resources>

@@ -19,4 +19,9 @@
         android:name="pe.idat.joeinventory.view.fragments.HistorialFragment"
         android:label="Consulta Producto"
         tools:layout="@layout/fragment_historial" />
+    <fragment
+        android:id="@+id/nav_informacion"
+        android:name="pe.idat.joeinventory.view.fragments.InformacionFragment"
+        android:label="@string/mn_acerda_de"
+        tools:layout="@layout/fragment_informacion" />
 </navigation>
