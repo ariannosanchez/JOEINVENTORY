@@ -67,7 +67,7 @@ public class HistorialFragment extends Fragment implements View.OnClickListener 
             binding.etproveedor.setText("");
             binding.etdetalle.setText("");
             Glide.with(binding.getRoot())
-                    .load("https://media.tenor.com/IHdlTRsmcS4AAAAC/404.gif")
+                    .load("https://aq-fes.com/uk/wp-content/uploads/sites/2/2020/02/AQ_Logistics_2.gif")
                     .into(binding.ivimagen);
         }
         else{

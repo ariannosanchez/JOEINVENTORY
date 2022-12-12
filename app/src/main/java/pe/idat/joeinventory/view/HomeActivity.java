@@ -92,12 +92,12 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    public boolean onNavigationItemSelected(@NonNull MenuItem item){
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
         int id = item.getItemId();
         if (id == R.id.action_settings){
             CerrarSesion();
         }
-        return  true;
+        return super.onOptionsItemSelected(item);
     }
 
     private void CerrarSesion() {
