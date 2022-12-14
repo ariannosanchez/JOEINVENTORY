@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class InventoryClient {
     private static final String BASE_URL = "http://192.168.18.136:9000/api/";
-//    private static final String BASE_URL = "https://api-joi-inventory2.onrender.com";
+//    private static final String BASE_URL = "https://api-joi-inventory2.onrender.com/api/";
     public static InventoryServicio INSTANCE;
 
     public InventoryClient() {

@@ -47,7 +47,7 @@ public class AgregarProducto extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         registrarProducto();
         startActivity(new Intent(AgregarProducto.this,
-                PrincipalFragment.class));
+                HomeActivity.class));
     }
 
     private void registrarProducto(){
@@ -81,6 +81,7 @@ public class AgregarProducto extends AppCompatActivity implements View.OnClickLi
             requestRegistroProducto.setDetalle(binding.etdetallepro.getText().toString());
             authViewModel.registroProducto(requestRegistroProducto);
             setearControles();
+            Toast.makeText(this, "Producto registrado exitosamente", Toast.LENGTH_SHORT).show();
         }
     }
 
