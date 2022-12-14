@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void validarAutenticacion(ResponseLogin responseLogin) {
         if (responseLogin.getRpta()){
+            Toast.makeText(this, responseLogin.getMensaje(), Toast.LENGTH_SHORT).show();
             startActivity(new Intent(MainActivity.this, HomeActivity.class));
             finish();
         }else{

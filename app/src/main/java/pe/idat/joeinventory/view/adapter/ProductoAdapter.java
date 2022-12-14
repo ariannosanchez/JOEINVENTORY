@@ -38,6 +38,7 @@ public class ProductoAdapter extends RecyclerView.Adapter<ProductoAdapter.ViewHo
         final ResponseProducto responseProducto = listProducto.get(position);
         holder.binding.tvcodigo.setText(responseProducto.getCodigo());
         holder.binding.tvnombre.setText(responseProducto.getNombre());
+        holder.binding.tvmarca.setText(responseProducto.getMarca());
         holder.binding.tvcantidad.setText(responseProducto.getCantidad().toString());
         Glide.with(holder.binding.getRoot())
                 .load(responseProducto.getUrlImage())
