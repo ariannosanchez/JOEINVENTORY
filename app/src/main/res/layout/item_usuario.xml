@@ -63,10 +63,11 @@
             android:id="@+id/tvfecha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="44dp"
             android:layout_marginEnd="16dp"
             android:text="USUARIO JOE"
-            android:textSize="16sp"
+            android:textSize="12sp"
+            android:textColor="@color/darkBlue"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
