@@ -61,6 +61,7 @@ public class HistorialFragment extends Fragment implements View.OnClickListener 
 
     private void SetearValores(ResponseProducto res){
         if (res.getCodigo().equals("null")){
+            binding.etcodigo.setText("");
             binding.etnombre.setText("No se encontraron resultados");
             binding.etmarca.setText("");
             binding.etcantidad.setText("");
@@ -71,6 +72,7 @@ public class HistorialFragment extends Fragment implements View.OnClickListener 
                     .into(binding.ivimagen);
         }
         else{
+            binding.etcodigo.setText(res.getCodigo());
             binding.etnombre.setText(res.getNombre());
             binding.etmarca.setText(res.getMarca());
             binding.etdetalle.setText(res.getDetalle());

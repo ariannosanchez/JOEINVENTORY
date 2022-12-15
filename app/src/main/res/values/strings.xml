@@ -26,6 +26,7 @@
     <string name="DesarrolladoresTXT2">Desarrollado por: Jeremy Ayza Matias</string>
     <string name="CorreoContactoTXT">Contacto: grupo3@outlook.com</string>
     <string name="VersionTXT">Versión 1.0</string>
+    <string name="Ir_terminos_politicas">Politicas de privacidad</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
